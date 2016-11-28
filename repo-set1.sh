@@ -53,9 +53,9 @@ for repo in "${ARRAY[@]}" ; do
  git clone git@github.com:$VALUE
 
  cd $KEY
- rm README.md
- git rm README.md
- git commit "-amRemove Readme.adoc"
+ cp ../CODE_OF_CONDUCT.adoc ./
+ git add CODE_OF_CONDUCT.adoc
+ git commit "-amcode of conduct"
  git push origin master
  cd ..
  rm -rf $KEY
